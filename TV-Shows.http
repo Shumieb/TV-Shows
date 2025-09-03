@@ -7,18 +7,26 @@ GET {{TV-Shows_HostAddress}}/platforms
 ###
 
 POST {{TV-Shows_HostAddress}}/platforms
+Content-Type: application/json
+{
+    "name": "Netflix"
+}
 
 ###
 
-DELETE {{TV-Shows_HostAddress}}/platforms/{id}
+DELETE {{TV-Shows_HostAddress}}/platforms/1
 
 ###
 
-GET {{TV-Shows_HostAddress}}/platforms/{id}
+GET {{TV-Shows_HostAddress}}/platforms/1
 
 ###
 
-PUT {{TV-Shows_HostAddress}}/platforms/{id}
+PUT {{TV-Shows_HostAddress}}/platforms/1
+Content-Type: application/json
+{
+    "name": "Prime"
+}
 
 ###
 
@@ -27,17 +35,35 @@ GET {{TV-Shows_HostAddress}}/shows
 ###
 
 POST {{TV-Shows_HostAddress}}/shows
+Content-Type: application/json
+{
+    "name": "Prime Suspect",
+    "season": 1,
+    "episode": 2,
+    "platformId": "1",
+    "note": "This is a note",
+    "like": false
+}
 
 ###
 
-DELETE {{TV-Shows_HostAddress}}/shows/{id}
+DELETE {{TV-Shows_HostAddress}}/shows/1
 
 ###
 
-GET {{TV-Shows_HostAddress}}/shows/{id}
+GET {{TV-Shows_HostAddress}}/shows/1
 
 ###
 
-PUT {{TV-Shows_HostAddress}}/shows/{id}
+PUT {{TV-Shows_HostAddress}}/shows/1
+Content-Type: application/json
+{
+    "name": "Prime Suspect",
+    "season": 1,
+    "episode": 2,
+    "platformId": "1",
+    "note": "This is a note",
+    "like": true
+}
 
 ###
